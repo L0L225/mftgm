@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import random
 from .. import loader, utils
 
 logger = logging.getLogger(__name__)
@@ -17,7 +18,16 @@ class Mod(loader.Module):
     async def examcmd(self, message):
         await utils.answer(message, "WoW")
 
-    async def timercmd(self, message):
-        await utils.answer(message, "LoL")
-        await asyncio.sleep(3)
-        await utils.answer(message, "Kek")
+    async def pentagoncmd(self, message):
+        r = random.randint(1,3)
+        await utils.answer(message, "Vzlom Pentagona V1")
+        await asyncio.sleep(1)
+
+        for i in range(101):
+                await utils.answer(message, "Hacking" {0}"%".format (i))
+		await asyncio.sleep(0.1)
+	await asyncio.sleep(3)
+	if r==1:
+		await utils.answer(message, "Pentagon hacked!")
+	else:
+		await utils.answer(message, "Access denied")
