@@ -1,29 +1,23 @@
-
 import asyncio
 import logging
-
 from .. import loader, utils
 
 logger = logging.getLogger(__name__)
 
 
 @loader.tds
-class YourMod(loader.Module):
-    """Description for module"""  # Translateable due to @loader.tds
+class Mod(loader.Module):
     strings = {"cfg_doc": "This is what is said, you can edit me with the configurator",
-               "name": "TestM",
-               "after_sleep": "We have finished sleeping!"}
-
+               "name": "TestM"}
     def __init__(self):
         self.config = loader.ModuleConfig("CONFIG_STRING", "hello", lambda m: self.strings("cfg_doc", m))
 
-    @loader.unrestricted  # Security setting to change who can use the command (defaults to owner | sudo)
-    async def examplecmd(self, message):
-        """Does something when you type .example (hence, named examplecmd)"""
-        logger.debug("We logged something!")
-        await utils.answer(message, self.config["CONFIG_STRING"])
-        await asyncio.sleep(5)  # Never use time.sleep
-        await utils.answer(message, self.strings("after_sleep", message))
 
+    @loader.unrestricted
     async def examcmd(self, message):
         await utils.answer(message, "WoW")
+
+    async def timercmd(self, message):
+        await utils.answer(message, "LoL")
+        await asyncio.sleep(3)
+        await utils.answer(message, "Kek")
