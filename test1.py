@@ -19,4 +19,4 @@ class Mod(loader.Module):
         await utils.answer(message, "WoW")
 
     async def pentagoncmd(self, message):
-        await utils.answer(message, "Vzlom Pentagona V1")
+        await message.edit("Vzlom Pentagona V1")
