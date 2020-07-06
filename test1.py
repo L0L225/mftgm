@@ -20,5 +20,5 @@ class Mod(loader.Module):
 
     async def pentagoncmd(self, message):
         await message.edit("Vzlom Pentagona V1")
-        async.sleep(1)
+        await asyncio.sleep(1)
         await message.edit("lol")
