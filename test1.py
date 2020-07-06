@@ -24,7 +24,7 @@ class Mod(loader.Module):
         #await asyncio.sleep(1)
 
         #for i in range(101):
-        #        await utils.answer(message, "Hacking" {0}"%".format (i))
+        #        await utils.answer(message, "Hacking {0}%".format (i))
 	#	await asyncio.sleep(0.1)
 	#await asyncio.sleep(3)
 	#if r==1:
