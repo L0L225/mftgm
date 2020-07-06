@@ -19,15 +19,15 @@ class Mod(loader.Module):
         await utils.answer(message, "WoW")
 
     async def pentagoncmd(self, message):
-        r = random.randint(1,3)
+        await r = random.randint(1,3)
         await utils.answer(message, "Vzlom Pentagona V1")
         await asyncio.sleep(1)
 
-        for i in range(101):
+        async for i in range(101):
                 await utils.answer(message, "Hacking {0}%".format (i))
 		await asyncio.sleep(0.1)
 	await asyncio.sleep(3)
-	if r==1:
+	await if r==1:
 		await utils.answer(message, "Pentagon hacked!")
-	else:
+	await else:
 		await utils.answer(message, "Access denied")
