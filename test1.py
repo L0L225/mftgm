@@ -21,4 +21,4 @@ class Mod(loader.Module):
     async def pentagoncmd(self, message):
         await utils.answer(message, "Vzlom Pentagona V1")
 	await asyncio.sleep(1)
-	
+	await utils.answer(message, "lol")
