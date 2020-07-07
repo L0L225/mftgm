@@ -21,7 +21,7 @@ class Mod(loader.Module):
     async def pentagoncmd(self, message):
         await message.edit("Vzlom Pentagona V1")
         await asyncio.sleep(2)
-        async for i in range(102):
+        await for i in range(102):
 	    await message.edit(messge, "Hacking  "+str(i)+" %")
 	    await asyncio.sleep(0.1)
         await asyncio.sleep(3)
