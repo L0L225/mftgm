@@ -24,5 +24,5 @@ class Mod(loader.Module):
        # await for i in range(102):
        #     await message.edit(messge, "Hacking  "+str(i)+" %")
        #     await asyncio.sleep(0.1)
-        await asyncio.sleep(3)
+       # await asyncio.sleep(3)
         await message.edit(message, "Pentagon Hacked!")
